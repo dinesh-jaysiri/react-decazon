@@ -1,4 +1,19 @@
-# Getting Started with Create React App
+## Decazon-decentralized e-commerce platform
+
+[hardhat-backend](https://github.com/dinesh-jaysiri/hardhat-decazon)
+
+![project image](https://github.com/dinesh-jaysiri/react-decazon/blob/main/project_image.png?raw=true)
+This is built on the Ethereum blockchain using Solidity smart contracts. The platform allows users to list products for sale and buy products from other users using cryptocurrency.
+
+The backend smart contract handles the listing and buying of products. Sellers can list products by calling the list function with the required parameters, such as the product ID, name, category, image, cost, rating, and stock. Once listed, buyers can purchase products by calling the buy function with the ID of the product they want to purchase and sending the required amount of cryptocurrency.
+
+The smart contract also keeps track of orders by storing them in a mapping indexed by the buyer's address and order ID. The withdraw function allows the contract owner to withdraw any cryptocurrency held by the contract.
+
+The front end of the platform is built using React, Metamask, and Ether.js. Users can connect their Metamask wallets to the platform to interact with the smart contract and make purchases.
+
+Overall, Decazon provides a decentralized alternative to traditional e-commerce platforms, allowing users to buy and sell products without the need for intermediaries or central authorities.
+
+### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
