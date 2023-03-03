@@ -1,0 +1,469 @@
+:root {
+  --color-primary: #131921;
+  --color-secondary: #232f3e;
+  --color-accent: #e28a04;
+  --color-border: #e4e4e4;
+  --color-body: #111;
+  --border-radus: 5px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* typography */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--color-body);
+  font-family: 'Ubuntu', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h2 {
+  font-size: 5.2vw;
+  font-weight: 500;
+ 
+}
+
+h3 {
+  font-size: 3.6vw;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 2vw;
+  
+}
+
+.continer{
+  max-width: 1240px;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  
+}
+
+@media screen and (min-width:500px) {
+  h2 {
+    font-size: 2.6rem;
+  }
+  h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  
+  }
+}
+
+@media screen and (min-width:625px) {
+  h2 {
+    font-size: 3.6rem;
+  }
+
+  h3{
+    font-size: 2.6rem;
+  }
+}
+
+
+/* button */
+
+.btn {
+  border: none;
+  background: var(--color-accent);
+  font-size: 3.2vw;
+  font-weight: 700;
+  border-radius: var(--border-radus);
+  line-height: 3.2vw;
+  padding: 1.6vw 4vw ;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.btn-round {
+  border-radius: 10px;
+}
+
+@media screen and (min-width:500px){
+  .btn{
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    padding: 0.8rem 2rem;
+  }
+}
+
+/* logo */
+
+.logo{
+  font-size: 6vw;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+}
+
+.logo-accent{
+  color: var(--color-accent);
+}
+
+@media screen and (min-width:500px) {
+  .logo {
+    font-size: 3rem;
+  }
+}
+
+/* nav */
+
+.nav{
+  height: 12.8vw;
+  background: var(--color-primary);
+}
+
+.search-bar{
+  border: none;
+  border-radius: 3px;
+  font-size: 3.2vw;
+  outline: none;
+  padding: 1.6vw;
+  margin-left: 4vw;
+  margin-right: 4vw;
+  width: 100%;
+  max-width: 620px;
+}
+
+.nav .continer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  
+}
+
+@media screen and (min-width:500px) {
+  .nav {
+    height: 64px;
+  }
+
+  .search-bar {
+    font-size: 1.6rem;
+    padding: 8px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+
+/* sub menu */
+
+.sub-menu{
+  height: 8vw;
+  background: var(--color-secondary);
+  text-align: center;
+}
+
+.menu-list{
+  list-style: none;
+  display: inline-flex;
+  padding-left: 0;
+}
+
+.menu-list__item {
+  margin-left: 4vw;
+  font-size: 3vw;
+  font-weight: 500;
+  color: #b9c4cb;
+  white-space: nowrap;
+}
+
+.menu-list__item:nth-child(1){
+  margin-left: 0;
+}
+
+@media screen and (min-width:500px) {
+  .sub-menu {
+    height: 40px;
+  }
+
+  .menu-list__item {
+    margin-left: 20px;
+    font-size: 1.6rem;
+  }
+}
+
+/* Rating */
+
+.rating-continer{
+  display: flex;
+}
+
+.rating-str{
+  width: 2.72vw;
+  margin-right: 3px;
+}
+
+@media screen and (min-width:625px) {
+  .rating-str {
+    width: 16px;
+  }
+}
+/* product */
+
+.product {
+  width: 43.2vw;
+  box-shadow: 0 0 1.6vw rgba(0, 0, 0,.2);
+  cursor: pointer;
+}
+
+.product p {
+  margin: 1.6vw 0 1.6vw 0;
+}
+
+.product__img{
+  width: 43.2vw;
+  height: 43.2vw;
+  object-fit: contain;
+}
+
+.product__description{
+  padding: 0 1.6vw 1.6vw 1.6vw;
+}
+
+.product__name{
+  font-size: 3.2vw;
+  font-weight: 400;
+}
+
+.product__price {
+  font-size: 2.88vw;
+  font-weight: 500;
+}
+
+
+
+@media  screen and (min-width:625px) {
+
+  .product{
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  }
+
+  .product p {
+    margin: 10px 0 10px 0;
+  }
+
+  .product__img{
+    width: 300px;
+    height: 300px;
+  }
+  .product__description{
+    padding: 0 10px 10px 10px;
+  }
+  .product__name {
+    font-size: 2rem;
+  }
+
+  .product__price {
+    font-size: 1.8rem;
+  }
+}
+
+/* card */
+.card{
+  margin-bottom: 6vw;
+}
+
+.card-continer{
+  padding-top: 4vw;
+}
+
+.separator {
+  height: 2px;
+  background:rgba(0, 0, 0,.1);
+  width: 100%;
+}
+
+@media screen and (min-width:500px) {
+  .card-continer {
+    padding-top: 20px;
+  }
+
+  .card{
+    margin-bottom: 30px;
+  }
+}
+
+
+
+/* home */
+
+.home {
+  min-height: 90vh;
+}
+
+.home .card .card-continer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  row-gap: 3.2vw;
+  column-gap: 1.6vw;
+  justify-items: center;
+}
+
+@media screen and (min-width:938px){
+  .home .card .card-continer {
+    grid-template-columns: 33.3% 33.3% 33.3%;
+  }
+}
+
+@media screen and (min-width:625px) {
+  .home .card .card-continer {
+      row-gap: 20px;
+      column-gap: 10px;
+    }
+}
+
+/* overview */
+
+.overview{
+  min-height: 90vh
+}
+
+.overview__continer {
+  display: grid;
+  justify-items: flex-start;
+  padding-top: 3.2vw;
+}
+
+.overview__img {
+  width: 68.8vw;
+  height: 68.8vw;
+  object-fit: contain;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  margin-bottom: 3.2vw;
+}
+
+.overview .card-continer {
+  padding-top: 1.6vw;
+}
+
+.overview .card {
+  margin-bottom: 1.6vw;
+}
+
+.overview .card  p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+@media screen and (min-width:625px) {
+  .overview__continer{
+    padding-top: 20px;
+  }
+  .overview__img {
+    width: 43rem;
+    height: 43rem;
+    margin-bottom: 20px;
+  }
+
+  .overview .card-continer {
+    padding-top: 10px;
+  }
+
+  .overview .card {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width:730px) {
+
+  .overview__continer {
+    grid-template-columns:  100fr 40%;
+    column-gap: 20px;
+  }
+
+}
+
+@media screen and (min-width:1100px) {
+
+  .overview__continer {
+    grid-template-columns: 100fr 40% 275px;
+  }
+
+}
+
+/* buy-now */
+
+.buy-now__continer {
+  width: 270px;
+  height: 350px;
+  border: 2px solid rgba(0, 0, 0,.1);
+  padding:10px;
+  font-size: 1.4rem ;
+  font-weight: 400;
+}
+
+.buy-now__continer p {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
+}
+
+.buy-now__price {
+  font-size: 2.2rem ;
+  font-weight: 500;
+}
+
+.buy-now__date {
+  font-weight: 700;
+}
+
+p.buy-now__stork {
+  margin-bottom: 10px;
+}
+
+.buy-now__continer .btn {
+  margin-bottom: 10px;
+}
+
+
+
+
+
+/* footer */
+
+.footer {
+  background: var(--color-primary);
+  font-size: 2.08vw;
+  font-weight: 500;
+  color: #d7d7d7;
+  height: 6.4vw;
+}
+
+.footer .continer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+.footer p {
+  margin: 0;
+  padding: 0;
+}
+
+@media  screen and (min-width:625px) {
+  .footer {
+    font-size: 1.6rem;
+    height: 65px;
+  }
+  
+}
